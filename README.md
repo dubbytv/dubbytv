@@ -69,4 +69,4 @@
 
 - **Website** — [dubby.tv](https://dubby.tv)
 - **Newsletter** — [Weekly dev updates](https://dubby.tv/#newsletter)
-- **Contact** — [hello@dubby.tv](mailto:hello@dubby.tv)
+- **Contact** — [woof@dubby.tv](mailto:woof@dubby.tv)
