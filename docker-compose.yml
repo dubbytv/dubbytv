@@ -1,0 +1,31 @@
+services:
+  dubby:
+    image: dubbytv/dubby:stable
+    container_name: dubby
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOST=0.0.0.0
+      - DATA_DIR=/data
+      - DATABASE_URL=file:/data/dubby.db
+      - JWT_SECRET=${JWT_SECRET:?Set JWT_SECRET in .env}
+    volumes:
+      - dubby-data:/data
+      - /path/to/media:/media:ro
+      - dubby-cache:/cache
+
+  # Optional: Valkey for job queues (recommended for production)
+  valkey:
+    image: valkey/valkey:latest
+    container_name: dubby-valkey
+    restart: unless-stopped
+    volumes:
+      - valkey-data:/data
+
+volumes:
+  dubby-data:
+  dubby-cache:
+  valkey-data:

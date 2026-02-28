@@ -1,0 +1,72 @@
+name: Bug Report
+description: Report a bug in Dubby
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the details below so we can investigate.
+
+        **Security vulnerabilities** should be reported via [GitHub Security Advisories](https://github.com/dubbytv/dubbytv/security/advisories/new), not here.
+
+  - type: input
+    id: version
+    attributes:
+      label: Dubby Version
+      description: The version of Dubby you are running (e.g., 0.2.0, 0.3.0-beta.1)
+      placeholder: '0.2.0'
+    validations:
+      required: true
+
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment Method
+      options:
+        - Docker Compose
+        - Kubernetes (Helm chart)
+        - Kubernetes (custom manifests)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this bug?
+      placeholder: |
+        1. Go to ...
+        2. Click on ...
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: Paste any relevant log output. This will be formatted as code automatically.
+      render: shell
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any other context — screenshots, browser, OS, hardware, etc.
