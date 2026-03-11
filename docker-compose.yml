@@ -11,7 +11,7 @@
 
 services:
   dubby:
-    image: dubbytv/dubby:stable
+    image: dubbytv/dubby:beta
     container_name: dubby
     restart: unless-stopped
     ports:

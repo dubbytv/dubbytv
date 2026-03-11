@@ -91,7 +91,7 @@
 ```yaml
 services:
   dubby:
-    image: dubbytv/dubby:stable
+    image: dubbytv/dubby:beta
     ports:
       - "3000:3000"
     environment:
