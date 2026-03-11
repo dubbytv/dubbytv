@@ -21,6 +21,19 @@
 
 ---
 
+> [!CAUTION]
+> **Alpha Software** — Dubby is early-stage software under active development. Expect bugs, incomplete features, and breaking changes between updates.
+>
+> **AI-Assisted Development** — Significant portions of this codebase were developed with AI assistance. While we strive for quality, the code has not been fully human-reviewed.
+>
+> **Not Security Audited** — This software has not been professionally pen-tested or security audited. Do not expose it to the public internet.
+>
+> **Data Loss Possible** — Database schema may change between versions. Migrations may not always be smooth. Keep backups of anything you value.
+>
+> **No Warranty** — This software is provided as-is with no warranty of any kind. Use at your own risk.
+
+---
+
 ## What dubby gets right
 
 - **Plays Everything** — Seven playback tiers from direct play to full transcode. dubby always finds a working mode — no "format not supported" screens, ever.
