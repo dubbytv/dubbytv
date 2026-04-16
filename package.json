@@ -1,0 +1,17 @@
+{
+  "name": "dubbytv",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1"
+  },
+  "lint-staged": {
+    "*.{md,yml,yaml,json}": "prettier --write"
+  }
+}

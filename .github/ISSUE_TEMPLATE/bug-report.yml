@@ -1,6 +1,6 @@
 name: Bug Report
 description: Report a bug in Dubby
-labels: ['bug']
+labels: ["bug"]
 body:
   - type: markdown
     attributes:
@@ -14,7 +14,7 @@ body:
     attributes:
       label: Dubby Version
       description: The version of Dubby you are running (e.g., 0.2.0, 0.3.0-beta.1)
-      placeholder: '0.2.0'
+      placeholder: "0.2.0"
     validations:
       required: true
 

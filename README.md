@@ -124,7 +124,7 @@ services:
     volumes:
       - valkey-data:/data
     healthcheck:
-      test: ['CMD', 'valkey-cli', 'ping']
+      test: ["CMD", "valkey-cli", "ping"]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -149,29 +149,29 @@ docker compose up -d
 
 ## How dubby compares
 
-|  | dubby | Plex | Emby | Jellyfin |
-|---|:---:|:---:|:---:|:---:|
-| **Philosophy** | | | | |
-| Free for local use | :white_check_mark: | :white_check_mark: | :heavy_minus_sign: <sup>1</sup> | :white_check_mark: |
-| No ads or tracking | :white_check_mark: | :x: <sup>2</sup> | :heavy_minus_sign: <sup>3</sup> | :white_check_mark: |
-| Privacy by default | :white_check_mark: | :x: <sup>4</sup> | :heavy_minus_sign: <sup>5</sup> | :white_check_mark: |
-| Open source | :x: | :x: | :x: <sup>6</sup> | :white_check_mark: |
-| Modern, polished UI | :white_check_mark: | :heavy_minus_sign: <sup>7</sup> | :x: <sup>8</sup> | :x: <sup>9</sup> |
-| **Playback** | | | | |
-| Adaptive playback engine | :white_check_mark: <sup>10</sup> | :x: | :x: | :x: |
-| HDR & Dolby Vision | :white_check_mark: | :heavy_minus_sign: <sup>11</sup> | :heavy_minus_sign: <sup>12</sup> | :heavy_minus_sign: <sup>13</sup> |
-| HDR tone-mapping (free) | :white_check_mark: <sup>14</sup> | :x: <sup>15</sup> | :x: <sup>16</sup> | :white_check_mark: |
-| HW transcoding included | :white_check_mark: <sup>17</sup> | :x: <sup>15</sup> | :x: <sup>16</sup> | :white_check_mark: |
-| Trickplay previews (free) | :white_check_mark: | :x: <sup>15</sup> | :x: <sup>16</sup> | :white_check_mark: |
-| Skip intro (free) | :white_check_mark: <sup>18</sup> | :x: <sup>15</sup> | :x: <sup>16</sup> | :heavy_minus_sign: <sup>19</sup> |
-| **Platform** | | | | |
-| Native TV apps | :white_check_mark: <sup>20</sup> | :white_check_mark: | :white_check_mark: | :heavy_minus_sign: <sup>21</sup> |
-| **Features** | | | | |
-| Media requests built-in | :white_check_mark: <sup>22</sup> | :x: <sup>23</sup> | :x: | :x: <sup>24</sup> |
-| Ahead-of-time optimization | :white_check_mark: <sup>25</sup> | :heavy_minus_sign: <sup>26</sup> | :x: | :x: |
-| Podcast support | :white_check_mark: | :x: <sup>27</sup> | :x: | :x: |
-| Backup & restore | :white_check_mark: <sup>28</sup> | :x: <sup>29</sup> | :heavy_minus_sign: <sup>30</sup> | :x: <sup>31</sup> |
-| Prometheus monitoring | :white_check_mark: <sup>32</sup> | :x: <sup>33</sup> | :x: | :x: <sup>34</sup> |
+|                            |              dubby               |               Plex               |               Emby               |             Jellyfin             |
+| -------------------------- | :------------------------------: | :------------------------------: | :------------------------------: | :------------------------------: |
+| **Philosophy**             |                                  |                                  |                                  |                                  |
+| Free for local use         |        :white_check_mark:        |        :white_check_mark:        | :heavy_minus_sign: <sup>1</sup>  |        :white_check_mark:        |
+| No ads or tracking         |        :white_check_mark:        |         :x: <sup>2</sup>         | :heavy_minus_sign: <sup>3</sup>  |        :white_check_mark:        |
+| Privacy by default         |        :white_check_mark:        |         :x: <sup>4</sup>         | :heavy_minus_sign: <sup>5</sup>  |        :white_check_mark:        |
+| Open source                |               :x:                |               :x:                |         :x: <sup>6</sup>         |        :white_check_mark:        |
+| Modern, polished UI        |        :white_check_mark:        | :heavy_minus_sign: <sup>7</sup>  |         :x: <sup>8</sup>         |         :x: <sup>9</sup>         |
+| **Playback**               |                                  |                                  |                                  |                                  |
+| Adaptive playback engine   | :white_check_mark: <sup>10</sup> |               :x:                |               :x:                |               :x:                |
+| HDR & Dolby Vision         |        :white_check_mark:        | :heavy_minus_sign: <sup>11</sup> | :heavy_minus_sign: <sup>12</sup> | :heavy_minus_sign: <sup>13</sup> |
+| HDR tone-mapping (free)    | :white_check_mark: <sup>14</sup> |        :x: <sup>15</sup>         |        :x: <sup>16</sup>         |        :white_check_mark:        |
+| HW transcoding included    | :white_check_mark: <sup>17</sup> |        :x: <sup>15</sup>         |        :x: <sup>16</sup>         |        :white_check_mark:        |
+| Trickplay previews (free)  |        :white_check_mark:        |        :x: <sup>15</sup>         |        :x: <sup>16</sup>         |        :white_check_mark:        |
+| Skip intro (free)          | :white_check_mark: <sup>18</sup> |        :x: <sup>15</sup>         |        :x: <sup>16</sup>         | :heavy_minus_sign: <sup>19</sup> |
+| **Platform**               |                                  |                                  |                                  |                                  |
+| Native TV apps             | :white_check_mark: <sup>20</sup> |        :white_check_mark:        |        :white_check_mark:        | :heavy_minus_sign: <sup>21</sup> |
+| **Features**               |                                  |                                  |                                  |                                  |
+| Media requests built-in    | :white_check_mark: <sup>22</sup> |        :x: <sup>23</sup>         |               :x:                |        :x: <sup>24</sup>         |
+| Ahead-of-time optimization | :white_check_mark: <sup>25</sup> | :heavy_minus_sign: <sup>26</sup> |               :x:                |               :x:                |
+| Podcast support            |        :white_check_mark:        |        :x: <sup>27</sup>         |               :x:                |               :x:                |
+| Backup & restore           | :white_check_mark: <sup>28</sup> |        :x: <sup>29</sup>         | :heavy_minus_sign: <sup>30</sup> |        :x: <sup>31</sup>         |
+| Prometheus monitoring      | :white_check_mark: <sup>32</sup> |        :x: <sup>33</sup>         |               :x:                |        :x: <sup>34</sup>         |
 
 <details>
 <summary>Notes</summary>
@@ -219,9 +219,9 @@ docker compose up -d
 
 ## Supported Platforms
 
-| Architecture | Available |
-|---|:---:|
-| x86-64 (amd64) | :white_check_mark: |
+| Architecture               |     Available      |
+| -------------------------- | :----------------: |
+| x86-64 (amd64)             | :white_check_mark: |
 | arm64 (Apple Silicon, RPi) | :white_check_mark: |
 
 ---

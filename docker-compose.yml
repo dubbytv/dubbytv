@@ -15,7 +15,7 @@ services:
     container_name: dubby
     restart: unless-stopped
     ports:
-      - '3000:3000'
+      - "3000:3000"
     environment:
       # Required - generate with: openssl rand -base64 32
       - BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET:?Set BETTER_AUTH_SECRET in .env}
@@ -59,7 +59,7 @@ services:
     volumes:
       - valkey-data:/data
     healthcheck:
-      test: ['CMD', 'valkey-cli', 'ping']
+      test: ["CMD", "valkey-cli", "ping"]
       interval: 10s
       timeout: 5s
       retries: 3
