@@ -69,19 +69,19 @@
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/yellowstone.png" alt="dubby — TV show detail" width="720">
+  <img src="screenshots/movie-detail.png" alt="dubby — movie detail with Dolby Vision badge and ratings" width="720">
 </p>
 
 <p align="center">
-  <img src="screenshots/F1.png" alt="dubby — movie detail with Dolby Vision badge and ratings" width="720">
-</p>
-
-<p align="center">
-  <img src="screenshots/discover.png" alt="dubby — discover and request" width="720">
+  <img src="screenshots/show-detail.png" alt="dubby — TV show detail" width="720">
 </p>
 
 <p align="center">
   <img src="screenshots/dashboard.png" alt="dubby — admin dashboard" width="720">
+</p>
+
+<p align="center">
+  <img src="screenshots/activity.png" alt="dubby — streaming activity" width="720">
 </p>
 
 ---
@@ -91,7 +91,8 @@
 ```yaml
 services:
   dubby:
-    image: dubbytv/dubby:beta
+    image: dubbytv/dubby:dev
+    restart: unless-stopped
     ports:
       - "3000:3000"
     environment:
@@ -105,9 +106,13 @@ services:
     depends_on:
       valkey:
         condition: service_healthy
+    # Intel QSV — uncomment to enable:
+    # devices:
+    #   - /dev/dri:/dev/dri
 
   valkey:
     image: valkey/valkey:latest
+    restart: unless-stopped
     volumes:
       - valkey-data:/data
     healthcheck:
@@ -200,7 +205,7 @@ docker compose up -d
 
 </details>
 
-<sub>Comparison accurate as of March 2026. Features may change as all projects evolve.</sub>
+<sub>Comparison accurate as of April 2026. Features may change as all projects evolve.</sub>
 
 ---
 
