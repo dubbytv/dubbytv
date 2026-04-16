@@ -60,10 +60,6 @@
 
 - **Private by Default** — No ads. No data selling. No cloud account required. Telemetry is opt-out and transparent. Your server, your rules.
 
-<p align="center">
-  <img src="screenshots/movies.png" alt="dubby — movie library" width="720">
-</p>
-
 ---
 
 ## Screenshots
