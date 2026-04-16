@@ -69,6 +69,18 @@
 ## Screenshots
 
 <p align="center">
+  <img src="screenshots/home.png" alt="dubby — home screen with continue watching" width="720">
+</p>
+
+<p align="center">
+  <img src="screenshots/movies.png" alt="dubby — movie library" width="720">
+</p>
+
+<p align="center">
+  <img src="screenshots/tv.png" alt="dubby — TV show library" width="720">
+</p>
+
+<p align="center">
   <img src="screenshots/movie-detail.png" alt="dubby — movie detail with Dolby Vision badge and ratings" width="720">
 </p>
 
@@ -78,10 +90,6 @@
 
 <p align="center">
   <img src="screenshots/dashboard.png" alt="dubby — admin dashboard" width="720">
-</p>
-
-<p align="center">
-  <img src="screenshots/activity.png" alt="dubby — streaming activity" width="720">
 </p>
 
 ---
